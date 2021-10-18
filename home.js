@@ -69,4 +69,5 @@ btn.addEventListener('click', sear)
 function sear() {
     search()
     console.log('india');
+    window.location.href = 'search.html'
 }
