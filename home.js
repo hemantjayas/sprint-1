@@ -43,3 +43,30 @@ function newsPage(news) {
 }
 
 
+
+
+
+
+let btn  = document.getElementById('btn')
+async function search() {
+    
+    let inp  = document.getElementById('inp').value
+    let res = await fetch(`https://newsapi.org/v2/everything?qInTitle=${inp}&apiKey=0bd17a27d92b4bad9c41acb5f35b96c0`);
+
+    let data = await res.json();
+    // console.log(data.articles);
+
+    localStorage.setItem('data', JSON.stringify(data))
+    
+
+   
+
+}
+
+
+btn.addEventListener('click', sear)
+ 
+function sear() {
+    search()
+    console.log('india');
+}
