@@ -1,7 +1,3 @@
-
-
-
-
 async function stories() {
 
     let res = await fetch(`https://newsapi.org/v2/everything?q=world&apiKey=0bd17a27d92b4bad9c41acb5f35b96c0`);
