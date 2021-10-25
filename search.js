@@ -1,5 +1,6 @@
 var data  =JSON.parse(localStorage.getItem('data'))
 console.log(data);
+console.log('edo we getting');
 
 
 let parent = document.getElementById('parent')
@@ -26,6 +27,7 @@ data.articles.forEach(function (news) {
 
 
 });
+localStorage.clear
 
 
 function newsPage(news) {

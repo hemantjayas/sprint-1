@@ -38,8 +38,8 @@ stories()
 
 function newsPage(news) {
 
-    window.location.href = 'news.html'
     localStorage.setItem('n', JSON.stringify(news))
+    window.location.href = 'news.html'
 }
 
 
@@ -48,26 +48,26 @@ function newsPage(news) {
 
 
 let btn  = document.getElementById('btn')
+btn.addEventListener('click', search)
 async function search() {
     
     let inp  = document.getElementById('inp').value
-    let res = await fetch(`https://newsapi.org/v2/everything?qInTitle=${inp}&apiKey=0bd17a27d92b4bad9c41acb5f35b96c0`);
+    let res = await fetch(`https://newsapi.org/v2/everything?q=${inp}&apiKey=0bd17a27d92b4bad9c41acb5f35b96c0`);
 
     let data = await res.json();
-    // console.log(data.articles);
+    console.log(data.articles);
 
     localStorage.setItem('data', JSON.stringify(data))
     
+    
 
    
-
 }
 
+sear()
 
-btn.addEventListener('click', sear)
- 
+
 function sear() {
-    search()
     console.log('india');
     window.location.href = 'search.html'
 }
