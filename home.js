@@ -58,9 +58,9 @@ async function search() {
     
 
    
+    sear()
 }
 
-sear()
 
 
 function sear() {
